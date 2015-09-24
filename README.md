@@ -3,12 +3,14 @@ Simple, dockerized spring boot service that prints hello world, along with the h
 
 ### Run and test locally
 mvn package && java -jar target/poc-docker-springboot-helloworldip-1.0.0-SNAPSHOT.jar
+
 go to http://localhost:8080
 
 ### Build the Docker image then push to DockerHub
 mvn package docker:build
 
 You may need to initialize the environment, if so:
+
 eval "$(docker-machine env default)"
 
 docker push tfritz/poc-docker-springboot-helloworldip
